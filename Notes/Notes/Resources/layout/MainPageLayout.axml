@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="86.0dp"
+		android:id="@+id/linearLayout1"
+		android:layout_marginTop="135.5dp" >
+		<Button
+			android:text="My Notes"
+			android:layout_width="254.5dp"
+			android:layout_height="match_parent"
+			android:id="@+id/AddBtn"
+			android:layout_marginLeft="52.0dp" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="86.0dp"
+		android:id="@+id/linearLayout2"
+		android:layout_marginTop="38.5dp" >
+		<Button
+			android:text="Add notes"
+			android:layout_width="249.0dp"
+			android:layout_height="match_parent"
+			android:id="@+id/ViewBtn"
+			android:layout_marginLeft="52.0dp" />
+	</LinearLayout>
+</LinearLayout>
