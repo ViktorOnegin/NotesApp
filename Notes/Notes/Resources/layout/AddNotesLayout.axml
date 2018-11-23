@@ -10,28 +10,28 @@
 		android:layout_width="match_parent"
 		android:layout_height="62.5dp"
 		android:id="@+id/linearLayout1">
-		<EditText
-			android:text=""
-			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="342.5dp"
-			android:layout_height="58.5dp"
-			android:id="@+id/editText1" />
+        <EditText
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="201.0dp"
+            android:layout_height="58.5dp"
+            android:id="@+id/editText1" />
 	</LinearLayout>
-	<LinearLayout
-		android:orientation="horizontal"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:layout_width="match_parent"
-		android:layout_height="98.5dp"
-		android:id="@+id/linearLayout2"
-		android:layout_marginTop="1.0dp">
-		<EditText
-			android:text="Large Text"
-			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="340.5dp"
-			android:layout_height="match_parent"
-			android:id="@+id/textView1" />
-	</LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="53.5dp"
+        android:id="@+id/linearLayout2"
+        android:layout_marginTop="1.0dp">
+        <EditText
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="335.5dp"
+            android:layout_height="54.5dp"
+            android:id="@+id/editText2" />
+    </LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
 		android:minWidth="25px"

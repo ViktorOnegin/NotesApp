@@ -12,17 +12,14 @@ using Android.Widget;
 
 namespace Notes
 {
-    [Activity(Label = "Activity1")]
-    public class AddNotesActivity : Activity
+    [Activity(Label = "ViewNotesActivity")]
+    public class ViewNotesActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.AddNotesLayout);
+            SetContentView(Resource.Layout.ViewNotesLayout);
 
-            var Title = FindViewById<EditText>(Resource.Id.editText1);
-            var Text = FindViewById<EditText>(Resource.Id.editText2);
-            var Addbtn = FindViewById<Button>(Resource.Id.button1);
         }
     }
 }

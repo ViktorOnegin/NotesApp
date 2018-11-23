@@ -15,7 +15,7 @@
 			android:text="My Notes"
 			android:layout_width="254.5dp"
 			android:layout_height="match_parent"
-			android:id="@+id/AddBtn"
+			android:id="@+id/ViewBtn"
 			android:layout_marginLeft="52.0dp" />
 	</LinearLayout>
 	<LinearLayout
@@ -30,7 +30,7 @@
 			android:text="Add notes"
 			android:layout_width="249.0dp"
 			android:layout_height="match_parent"
-			android:id="@+id/ViewBtn"
+			android:id="@+id/AddBtn"
 			android:layout_marginLeft="52.0dp" />
 	</LinearLayout>
 </LinearLayout>
