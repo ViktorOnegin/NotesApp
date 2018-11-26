@@ -44,7 +44,10 @@ namespace Notes
             View view = convertView;
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.NotesList, null);
-           
+            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Title;
+            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Text;
+
+            Button deleteBtn = view.FindViewById<Button>(Resource.Id.button1);
 
             return view;
         }

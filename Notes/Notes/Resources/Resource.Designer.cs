@@ -2435,8 +2435,8 @@ namespace Notes
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f080090
-			public const int button1 = 2131230864;
+			// aapt resource value: 0x7f08008d
+			public const int button1 = 2131230861;
 			
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
@@ -2510,8 +2510,8 @@ namespace Notes
 			// aapt resource value: 0x7f08008c
 			public const int editText1 = 2131230860;
 			
-			// aapt resource value: 0x7f08008e
-			public const int editText2 = 2131230862;
+			// aapt resource value: 0x7f08008f
+			public const int editText2 = 2131230863;
 			
 			// aapt resource value: 0x7f08007e
 			public const int edit_query = 2131230846;
@@ -2597,23 +2597,20 @@ namespace Notes
 			// aapt resource value: 0x7f08008b
 			public const int linearLayout1 = 2131230859;
 			
-			// aapt resource value: 0x7f08008d
-			public const int linearLayout2 = 2131230861;
-			
-			// aapt resource value: 0x7f08008f
-			public const int linearLayout3 = 2131230863;
+			// aapt resource value: 0x7f08008e
+			public const int linearLayout2 = 2131230862;
 			
 			// aapt resource value: 0x7f08001d
 			public const int listMode = 2131230749;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int listView1 = 2131230903;
+			// aapt resource value: 0x7f080090
+			public const int listView1 = 2131230864;
 			
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int masked = 2131230905;
+			// aapt resource value: 0x7f0800b8
+			public const int masked = 2131230904;
 			
 			// aapt resource value: 0x7f0800a9
 			public const int media_actions = 2131230889;
@@ -2873,8 +2870,8 @@ namespace Notes
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int visible = 2131230904;
+			// aapt resource value: 0x7f0800b7
+			public const int visible = 2131230903;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

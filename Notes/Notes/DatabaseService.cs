@@ -10,49 +10,33 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SQLite;
 
 namespace Notes
 {
     public class DatabaseService
     {
-        //SQLiteConnection db;
+        SQLiteConnection db;
 
         public void CreateDatabase()
         {
-            string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "mydatabase.db3");
-            //db = new SQLiteConnection(dbPath);
+            string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "database.db3");
+            db = new SQLiteConnection(dbPath);
+            db.CreateTable<Stock>();
         }
 
-        public void CreateTableWithData()
+        public void AddStock(string name)
         {
-            //db.CreateTable<Stock>();
-            //if (db.Table<Stock>().Count() == 0)
-            //{
-            //    var newStock = new Stock();
-            //    //newStock.Symbol = "AAPL";
-            //    //db.Insert(newStock);
-            //    //newStock.Symbol = "AMD";
-            //    //db.Insert(newStock);
-            //    //newStock.Symbol = "TESLA";
-            //    //db.Insert(newStock);
-            //    //newStock.Symbol = "AMAZON";
-            //    //db.Insert(newStock);
-            //    //newStock.Symbol = "MSDN";
-            //    //db.Insert(newStock);
-            //}
+            var newStock = new Stock();
+            newStock.Title = name;
+            newStock.Text = name;
+            db.Insert(newStock);
         }
 
-        //public void AddStock(string name)
-        //{
-        //    var newStock = new Stock();
-        //    newStock.Symbol = name;
-        //    db.Insert(newStock);
-        //}
-
-        //public TableQuery<Stock> GetAllStocks()
-        //{
-        //    var table = db.Table<Stock>();
-        //    return table;
-        //}
+        public TableQuery<Stock> GetAllStocks()
+        {
+            var table = db.Table<Stock>();
+            return table;
+        }
     }
 }
