@@ -38,7 +38,7 @@ namespace Notes
                 databaseService.AddStock(StockName1,StockName2);
 
                 stocks = databaseService.GetAllStocks();
-                list.Adapter = new NotesAdapter(this, stocks.ToList());
+                list.Adapter = new NotesAdapter(this, stocks.ToList(), databaseService);
             };
         }
 

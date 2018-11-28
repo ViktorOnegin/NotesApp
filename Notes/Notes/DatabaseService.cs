@@ -29,16 +29,15 @@ namespace Notes
         {
             var newStock = new Stock();
             newStock.Title = title;
-            newStock.Text = content;
+            newStock.Content = content;
             db.Insert(newStock);
         }
 
-        public void DeleteStock(string title, string content)
+        public void DeleteStock(int id)
         {
-            var deleteStock = new Stock();
-            deleteStock.Title = title;
-            deleteStock.Text = content;
-            db.Delete(deleteStock);
+            Stock delete = new Stock();
+            delete.ID = id;
+            db.Delete(delete);
         }
 
         public TableQuery<Stock> GetAllStocks()

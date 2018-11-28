@@ -16,12 +16,15 @@ namespace Notes
     class NotesAdapter : BaseAdapter
     {
         List<Stock> items;
+        DatabaseService databaseService;
         Activity context;
+        Stock stock;
 
-        public NotesAdapter(Activity context, List<Stock> items) : base()
+        public NotesAdapter(Activity context, List<Stock> items, DatabaseService databaseService) : base()
         {
             this.context = context;
             this.items = items;
+            this.databaseService = databaseService;
         }
 
         public override int Count
@@ -44,23 +47,18 @@ namespace Notes
             View view = convertView;
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.NotesList, null);
-            view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Title;
-            view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Text;
+            var Title = view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Title;
+            var Content = view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Content;
+
 
             var databaseService = new DatabaseService();
             databaseService.CreateDatabase();
 
-            Button deleteBtn = view.FindViewById<Button>(Resource.Id.button1);
+            var deleteBtn = view.FindViewById<Button>(Resource.Id.button1);
 
             deleteBtn.Click += delegate
             {
-                var Title = view.FindViewById<TextView>(Resource.Id.textView1);
-                var Content = view.FindViewById<TextView>(Resource.Id.textView2);
-
-                var StockName1 = Title.Text;
-                var StockName2 = Content.Text;
-                databaseService.DeleteStock(StockName1, StockName2);
-
+                
             };
 
             return view;
