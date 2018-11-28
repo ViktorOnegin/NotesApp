@@ -18,7 +18,7 @@ namespace Notes
         List<Stock> items;
         DatabaseService databaseService;
         Activity context;
-        Stock stock;
+        //Stock stock;
 
         public NotesAdapter(Activity context, List<Stock> items, DatabaseService databaseService) : base()
         {
@@ -50,16 +50,22 @@ namespace Notes
             var Title = view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Title;
             var Content = view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Content;
 
+            position = (items.Count - 1) - position;
+            view.Tag = position;
 
-            var databaseService = new DatabaseService();
-            databaseService.CreateDatabase();
+            //var deleteBtn = view.FindViewById<Button>(Resource.Id.button1);
+            //deleteBtn.Tag = position;
 
-            var deleteBtn = view.FindViewById<Button>(Resource.Id.button1);
+            //var databaseService = new DatabaseService();
+            //databaseService.CreateDatabase();
+            //var stocks = databaseService.GetAllStocks();
 
-            deleteBtn.Click += delegate
-            {
-                
-            };
+            //deleteBtn.Click += delegate
+            //{
+            //    var StockName1 = Title;
+            //    var StockName2 = Content;
+            //    databaseService.DeleteStock(StockName1, StockName2);
+            //};
 
             return view;
         }

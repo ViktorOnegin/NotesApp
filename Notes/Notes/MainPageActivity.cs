@@ -17,7 +17,6 @@ namespace Notes
 
             var Addbtn = FindViewById<Button>(Resource.Id.AddBtn);
             Addbtn.Click += AddBTN_Click;
-
         }
 
         private void AddBTN_Click(object sender, System.EventArgs e)

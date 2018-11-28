@@ -35,9 +35,9 @@ namespace Notes
 
         public void DeleteStock(int id)
         {
-            Stock delete = new Stock();
-            delete.ID = id;
-            db.Delete(delete);
+            var newStock = new Stock();
+            newStock.ID = id;
+            db.Delete(newStock);
         }
 
         public TableQuery<Stock> GetAllStocks()
