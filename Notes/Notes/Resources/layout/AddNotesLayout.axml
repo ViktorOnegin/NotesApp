@@ -15,8 +15,9 @@
 		android:id="@+id/linearLayout1">
 		<EditText
 			android:text=""
+			android:hint="Title"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="203.5dp"
+			android:layout_width="247.5dp"
 			android:layout_height="match_parent"
 			android:id="@+id/editText1" />
 		<Button
@@ -34,8 +35,9 @@
 		android:id="@+id/linearLayout2">
 		<EditText
 			android:text=""
+			android:hint="Content"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="287.0dp"
+			android:layout_width="330.0dp"
 			android:layout_height="match_parent"
 			android:id="@+id/editText2" />
 	</LinearLayout>

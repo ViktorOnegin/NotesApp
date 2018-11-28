@@ -25,12 +25,20 @@ namespace Notes
             db.CreateTable<Stock>();
         }
 
-        public void AddStock(string name)
+        public void AddStock(string title, string content)
         {
             var newStock = new Stock();
-            newStock.Title = name;
-            newStock.Text = name;
+            newStock.Title = title;
+            newStock.Text = content;
             db.Insert(newStock);
+        }
+
+        public void DeleteStock(string title, string content)
+        {
+            var deleteStock = new Stock();
+            deleteStock.Title = title;
+            deleteStock.Text = content;
+            db.Delete(deleteStock);
         }
 
         public TableQuery<Stock> GetAllStocks()

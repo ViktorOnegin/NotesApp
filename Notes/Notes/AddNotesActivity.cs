@@ -20,8 +20,9 @@ namespace Notes
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.AddNotesLayout);
 
+
             var Title = FindViewById<EditText>(Resource.Id.editText1);
-            var Text = FindViewById<EditText>(Resource.Id.editText2);
+            var Content = FindViewById<EditText>(Resource.Id.editText2);
             var Addbtn = FindViewById<Button>(Resource.Id.button1);
             var list = FindViewById<ListView>(Resource.Id.listView1);
 
@@ -33,9 +34,8 @@ namespace Notes
             Addbtn.Click += delegate
             {
                 var StockName1 = Title.Text;
-                databaseService.AddStock(StockName1);
-                var StockName2 = Text.Text;
-                databaseService.AddStock(StockName2);
+                var StockName2 = Content.Text;
+                databaseService.AddStock(StockName1,StockName2);
 
                 stocks = databaseService.GetAllStocks();
                 list.Adapter = new NotesAdapter(this, stocks.ToList());

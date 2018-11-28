@@ -16,7 +16,7 @@
 		<TextView
 			android:text="Text"
 			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="203.5dp"
+			android:layout_width="267.0dp"
 			android:layout_height="match_parent"
 			android:id="@+id/textView1" />
 		<Button

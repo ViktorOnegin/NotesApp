@@ -47,7 +47,21 @@ namespace Notes
             view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Title;
             view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Text;
 
+            var databaseService = new DatabaseService();
+            databaseService.CreateDatabase();
+
             Button deleteBtn = view.FindViewById<Button>(Resource.Id.button1);
+
+            deleteBtn.Click += delegate
+            {
+                var Title = view.FindViewById<TextView>(Resource.Id.textView1);
+                var Content = view.FindViewById<TextView>(Resource.Id.textView2);
+
+                var StockName1 = Title.Text;
+                var StockName2 = Content.Text;
+                databaseService.DeleteStock(StockName1, StockName2);
+
+            };
 
             return view;
         }
