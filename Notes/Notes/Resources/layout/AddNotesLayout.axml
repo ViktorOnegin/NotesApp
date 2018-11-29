@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+	android:background="#FF009726"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
@@ -10,6 +11,7 @@
         android:orientation="horizontal"
         android:minWidth="25px"
         android:minHeight="25px"
+		android:background="#00ff00"
         android:layout_width="match_parent"
         android:layout_height="46.5dp"
         android:id="@+id/linearLayout1">
@@ -30,6 +32,7 @@
         android:orientation="horizontal"
         android:minWidth="25px"
         android:minHeight="25px"
+		android:background="#00ff00"
         android:layout_width="match_parent"
         android:layout_height="49.0dp"
         android:id="@+id/linearLayout2">
@@ -46,7 +49,8 @@
 		android:minHeight="25px"
 		android:layout_width="match_parent"
 		android:layout_height="403.0dp"
-		android:id="@+id/listView1" />
+		android:id="@+id/listView1"
+		android:layout_marginTop="0.0dp" />
 	<Button
 		android:text="Update"
 		android:layout_width="match_parent"
