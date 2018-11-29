@@ -24,10 +24,8 @@ namespace Notes
             var Title = FindViewById<EditText>(Resource.Id.editText1);
             var Content = FindViewById<EditText>(Resource.Id.editText2);
             var Addbtn = FindViewById<Button>(Resource.Id.button1);
+            var button = FindViewById<Button>(Resource.Id.button2);
             var list = FindViewById<ListView>(Resource.Id.listView1);
-
-            var deleteBtn = FindViewById<Button>(Resource.Id.button1);
-            //deleteBtn.Click += DeleteBtn_Click;
 
             var databaseService = new DatabaseService();
             databaseService.CreateDatabase();
@@ -44,9 +42,12 @@ namespace Notes
                 list.Adapter = new NotesAdapter(this, stocks.ToList(), databaseService);
             };
 
-            list.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs e)
+            button.Click += delegate
             {
-                databaseService.DeleteStock(stocks.ToList()[e.Position].ID);
+                var StockName1 = Title.Text;
+                var StockName2 = Content.Text;
+                databaseService.UptadeStock(StockName1, StockName2);
+
                 stocks = databaseService.GetAllStocks();
                 list.Adapter = new NotesAdapter(this, stocks.ToList(), databaseService);
             };

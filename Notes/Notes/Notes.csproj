@@ -59,6 +59,7 @@
     <Compile Include="AddNotesActivity.cs" />
     <Compile Include="DatabaseService.cs" />
     <Compile Include="MainPageActivity.cs" />
+    <Compile Include="MyNotesActivity.cs" />
     <Compile Include="NotesAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +112,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\NotesList.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\MyNotesLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

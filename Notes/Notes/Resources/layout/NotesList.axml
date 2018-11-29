@@ -12,17 +12,18 @@
 		android:layout_width="match_parent"
 		android:layout_height="46.5dp"
 		android:id="@+id/linearLayout1">
-		<TextView
-			android:text="Text"
-			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="267.0dp"
-			android:layout_height="match_parent"
-			android:id="@+id/textView1" />
-		<Button
-			android:text="Delete"
-			android:layout_width="wrap_content"
-			android:layout_height="match_parent"
-			android:id="@+id/button1" />
+        <TextView
+            android:text="Title :"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="91.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1" />
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3" />
 	</LinearLayout>
 	<LinearLayout
 		android:orientation="horizontal"
@@ -31,12 +32,18 @@
 		android:layout_width="match_parent"
 		android:layout_height="49.0dp"
 		android:id="@+id/linearLayout2">
-		<TextView
-			android:text="Text"
-			android:textAppearance="?android:attr/textAppearanceLarge"
-			android:layout_width="355.5dp"
-			android:layout_height="match_parent"
-			android:id="@+id/textView2" />
+        <TextView
+            android:text="Content :"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="90.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2" />
+        <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView4" />
 	</LinearLayout>
 
 </LinearLayout>

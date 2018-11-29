@@ -27,17 +27,27 @@ namespace Notes
 
         public void AddStock(string title, string content)
         {
-            var newStock = new Stock();
-            newStock.Title = title;
-            newStock.Content = content;
+            var newStock = new Stock
+            {
+                Title = title,
+                Content = content
+            };
             db.Insert(newStock);
         }
 
-        public void DeleteStock(int id)
+        public void UptadeStock(string title, string content)
         {
-            var newStock = new Stock();
-            newStock.ID = id;
-            db.Delete(newStock);
+            var newStock = new Stock
+            {
+                Title = title,
+                Content = content
+            };
+            db.Update(newStock);
+        }
+
+        public void DeleteStock(Stock stock)
+        {
+            db.Delete(stock);
         }
 
         public TableQuery<Stock> GetAllStocks()

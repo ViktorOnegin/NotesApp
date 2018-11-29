@@ -10,15 +10,15 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
+using Newtonsoft.Json;
 
 namespace Notes
 {
-    class NotesAdapter : BaseAdapter
+    class NotesAdapter : BaseAdapter<Stock>
     {
         List<Stock> items;
-        DatabaseService databaseService;
+        readonly DatabaseService databaseService;
         Activity context;
-        //Stock stock;
 
         public NotesAdapter(Activity context, List<Stock> items, DatabaseService databaseService) : base()
         {
@@ -31,10 +31,10 @@ namespace Notes
         {
             get { return items.Count; }
         }
-
-        public override Java.Lang.Object GetItem(int position)
+        
+        public override Stock this[int position]
         {
-            return null; 
+            get { return items[position]; }
         }
 
         public override long GetItemId(int position)
@@ -47,27 +47,22 @@ namespace Notes
             View view = convertView;
             if (view == null)
                 view = context.LayoutInflater.Inflate(Resource.Layout.NotesList, null);
-            var Title = view.FindViewById<TextView>(Resource.Id.textView1).Text = items[position].Title;
-            var Content = view.FindViewById<TextView>(Resource.Id.textView2).Text = items[position].Content;
+            view.FindViewById<TextView>(Resource.Id.textView3).Text = items[position].Title;
+            view.FindViewById<TextView>(Resource.Id.textView4).Text = items[position].Content;
 
-            position = (items.Count - 1) - position;
             view.Tag = position;
-
-            //var deleteBtn = view.FindViewById<Button>(Resource.Id.button1);
-            //deleteBtn.Tag = position;
-
-            //var databaseService = new DatabaseService();
-            //databaseService.CreateDatabase();
-            //var stocks = databaseService.GetAllStocks();
-
-            //deleteBtn.Click += delegate
-            //{
-            //    var StockName1 = Title;
-            //    var StockName2 = Content;
-            //    databaseService.DeleteStock(StockName1, StockName2);
-            //};
+            view.Click -= View_Click;
+            view.Click += View_Click;
 
             return view;
+        }
+
+        public void View_Click(object sender, EventArgs args)
+        {
+            var position = (int)((View)sender).Tag;
+            var stock = new Intent(context, typeof(MyNotesActivity));
+            stock.PutExtra("stock", JsonConvert.SerializeObject(items[position]));
+            context.StartActivity(stock);
         }
     }
 }
